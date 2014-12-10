@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/joyent/node.svg)](https://travis-ci.org/acdlite/react-suitcss)
+[![Build Status](https://img.shields.io/travis/acdlite/react-suitcss.svg)](https://travis-ci.org/acdlite/react-suitcss)
 
 react-suitcss
 =================
