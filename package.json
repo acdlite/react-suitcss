@@ -21,13 +21,16 @@
   "author": "Andrew Clark <acdlite@me.com>",
   "license": "MIT",
   "dependencies": {
-    "case": "^1.1.2",
-    "react": "^0.12.1"
+    "case": "^1.1.2"
+  },
+  "peerDependencies": {
+    "react": "0.12.x"
   },
   "devDependencies": {
     "6to5": "^1.14.17",
     "chai": "^1.10.0",
     "jsdom": "^1.4.1",
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "react": "0.12.x"
   }
 }
