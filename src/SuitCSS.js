@@ -14,7 +14,6 @@ let SuitCSS = React.createClass({
     componentName: PropTypes.string.isRequired,
     modifiers: PropTypes.arrayOf(PropTypes.string),
     states: PropTypes.arrayOf(PropTypes.string),
-    element: PropTypes.string,
   },
 
   getDefaultProps() {
@@ -44,7 +43,7 @@ let SuitCSS = React.createClass({
   stateClasses() {
     return this.props.states
       .filter(
-        modifier => this.props[`is${squish(modifier)}`]
+        modifier => this.props[`is${squish(modifier)}`] === true
       )
       .map(
         modifier => `is-${camel(modifier)}`
