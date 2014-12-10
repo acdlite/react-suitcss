@@ -55,10 +55,11 @@ let SuitCSS = React.createClass({
 
     let classes = [
       this.baseClass(),
-      this.props.className,
     ]
       .concat(this.modifierClasses())
-      .concat(this.stateClasses())
+      .concat(this.stateClasses());
+
+    if (this.props.className) classes.push(this.props.className);
 
     let className = cx(
       classes.reduce((result, c) => {
