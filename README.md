@@ -23,7 +23,7 @@ var Toolbar = React.createClass({
       {...this.props}
       componentName="Toolbar"
       modifiers={['big', 'compact', 'red']}
-      states={['open, closed']}
+      states={['open', 'closed']}
     >
 
       ...
