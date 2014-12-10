@@ -9,8 +9,8 @@
   },
   "scripts": {
     "build": "6to5 src -d dist --modules commonInterop",
-    "test": "mocha ./dist/test/**/*.js",
-    "prepublish": "npm run test && npm run build"
+    "test": "npm run build && mocha ./dist/test/**/*.js",
+    "prepublish": "npm run test"
   },
   "keywords": [
     "react",
