@@ -1,6 +1,6 @@
 {
   "name": "react-suitcss",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A base React component for conformance with SUIT CSS naming conventions",
   "main": "dist/SuitCSS.js",
   "repository": {
