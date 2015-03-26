@@ -4,7 +4,7 @@ import React from 'react/addons';
 import { camel, squish } from 'case';
 
 let { PropTypes } = React;
-let { classSet: cx, PureRenderMixin } = React.addons;
+let { PureRenderMixin } = React.addons;
 
 let SuitCSS = React.createClass({
 
@@ -61,12 +61,7 @@ let SuitCSS = React.createClass({
 
     if (this.props.className) classes.push(this.props.className);
 
-    let className = cx(
-      classes.reduce((result, c) => {
-        result[c] = true;
-        return result;
-      }, {})
-    );
+    let className = classes.filter(Boolean).join(' ');
 
     return (
       <Element
