@@ -1,6 +1,9 @@
 'use strict';
 
 import { jsdom } from 'jsdom';
+import React from 'react'
+import { findDOMNode } from 'react-dom'
+import TestUtils from 'react-addons-test-utils'
 global.document = jsdom('');
 global.window = document.parentWindow;
 global.navigator = {};
@@ -9,9 +12,6 @@ navigator.userAgent = 'node';
 import { expect } from 'chai';
 
 describe('SuitCSS', function() {
-  import React from 'react/addons';
-  let {TestUtils} = React.addons;
-
   import SuitCSS from '../SuitCSS';
 
   let component = TestUtils.renderIntoDocument(
@@ -49,8 +49,8 @@ describe('SuitCSS', function() {
     />
   );
 
-  let componentEl = component.getDOMNode();
-  let buttonComponentEl = buttonComponent.getDOMNode();
+  let componentEl = findDOMNode(component);
+  let buttonComponentEl = findDOMNode(buttonComponent);
 
   it('has base class', function() {
     expect(elementHasClass(componentEl, 'Component')).to.be.true;

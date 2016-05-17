@@ -1,10 +1,10 @@
 'use strict';
 
-import React from 'react/addons';
+import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import { camel, squish } from 'case';
 
 let { PropTypes } = React;
-let { PureRenderMixin } = React.addons;
 
 let SuitCSS = React.createClass({
 
